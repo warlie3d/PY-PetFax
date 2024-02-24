@@ -1,15 +1,16 @@
-# config                    
-from flask import Flask
-from . import pets
+from flask import Flask 
 
-def create_app():
+def create_app(): 
     app = Flask(__name__)
 
-    # index route
     @app.route('/')
-    def index(): 
-        return 'This is my home page!'
-
+    def hello(): 
+        return 'Hello, PetFax!'
+    # /pets routes
+    from . import pets
     app.register_blueprint(pets.bp)
+    # /facts routes
+    from . import facts
+    app.register_blueprint(facts.bp)
 
     return app

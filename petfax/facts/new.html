@@ -11,19 +11,19 @@
 
 <body>
     <div class="container">
-        <H1>Submit Fax</H1>
-        <div class="callout">
+        <h1>Submit Fax</h1>
+        <div class="form-style">
             If you have some fun animal facts you'd like to share, please submit them! We may use them in the future.
         </div>
         <div class="facts-container">
-            <form>
+            <form action="/facts" method="POST">
                 <label for="submitter">
-                    <H2>Name</H2>
+                    <h2>Name</h2>
                 </label>
                 <input name="submitter" type="text">
                 <br />
                 <label for="fact">
-                    <H2>Fact</H2>
+                    <h2>Fact</h2>
                 </label>
                 <textarea name="fact"></textarea>
                 <br />
